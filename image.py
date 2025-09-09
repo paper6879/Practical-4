@@ -1,11 +1,10 @@
 import pygame
 import sys
 pygame.init()
-
 screen=pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Snake on Screen")
 
-BLACK=(0, 0, 0)
+BLACK=(0,0,0)
 GREEN=(0, 255, 0)
 
 snake_pos=[100, 50]
@@ -41,7 +40,6 @@ while True:
 
     snake_body.insert(0,list(snake_pos))
     snake_body.pop()
-
     for pos in snake_body:
         pygame.draw.rect(screen,GREEN,pygame.Rect(pos[0],pos[1],10,10))
     pygame.display.update()
